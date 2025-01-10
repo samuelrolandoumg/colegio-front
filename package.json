@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+  "postinstall": "ng build --configuration production",
+  "start:prod": "node_modules/.bin/http-server dist/colegio-front -p $PORT",
     "serve:ssr:colegio-front": "node dist/colegio-front/server/server.mjs"
   },
   "private": true,
