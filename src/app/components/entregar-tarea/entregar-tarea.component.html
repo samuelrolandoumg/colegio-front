@@ -1,0 +1,46 @@
+<!-- <div class="container">
+  <div class="nav-buttons">
+    <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+    <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+  </div>
+
+  <div class="center-content">
+    <h2>Hola, {{ usuario?.nombre }}</h2>
+    <h1>Entregar Tarea</h1>
+
+    <label for="fileInput">Seleccionar archivo:</label>
+    <input
+      type="file"
+      id="fileInput"
+      (change)="onFileSelected($event)"
+      accept=".pdf,.doc,.docx"
+      required
+    />
+
+    <div style="margin-top: 20px;">
+      <button class="btn btn-success" (click)="entregarTarea()">Subir Archivo</button>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="header-buttons">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+  <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+</div>
+
+<div class="content-container">
+  <h2>Hola, {{ usuario?.nombre }}</h2>
+  <h1>Entregar Tarea</h1>
+  <label for="fileInput">Seleccionar archivo:</label>
+  <input
+    type="file"
+    id="fileInput"
+    (change)="onFileSelected($event)"
+    accept=".pdf,.doc,.docx"
+    required
+  />
+  <div style="margin-top: 20px;">
+    <button class="btn btn-success" (click)="entregarTarea()">Subir Archivo</button>
+  </div>
+</div>

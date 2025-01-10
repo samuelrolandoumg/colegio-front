@@ -1,0 +1,37 @@
+
+<div class="tareas-container">
+  <button class="btn btn-secondary" (click)="navigateToDashboard()">Atrás</button>
+
+  <h2>Hola, {{ usuario?.nombre }}</h2>
+  <h1>Tareas Asignadas</h1>
+
+  <div *ngIf="noTareasPendientes" style="color: gray; font-style: italic;">
+    No tienes tareas pendientes.
+  </div>
+
+  <ul *ngIf="!noTareasPendientes">
+    <li *ngFor="let tarea of tareas">
+      <h3>{{ tarea.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+      <p><strong>Fecha de Entrega:</strong> {{ tarea.fecha_entrega | date }}</p>
+      <p><strong>Grupo:</strong> {{ tarea.nombre_grupo }}</p>
+      <p><strong>Clase:</strong> {{ tarea.nombre_clase }}</p>
+      <p><strong>Material:</strong> {{ tarea.archivo_nombre }}</p>
+
+      <button class="btn-entregar" (click)="irAEntregarTarea(tarea.id_tarea)">
+        Entregar Tarea
+      </button>
+
+      <!-- Mostrar el botón de "Ver Material" si hay un archivo adjunto -->
+      <button
+      class="btn btn-info"
+      *ngIf="tarea.archivo_url && tarea.archivo_url.trim() !== ''"
+      [routerLink]="['/ver-material']"
+      [queryParams]="{ archivoUrl: tarea.archivo_url, archivoNombre: tarea.archivo_nombre }"
+    >
+      Ver Material
+    </button>
+    
+    </li>
+  </ul>
+</div>

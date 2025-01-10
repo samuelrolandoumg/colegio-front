@@ -1,0 +1,97 @@
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Contenedor principal */
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Lista de notas */
+  .notas-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nota-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nota-item h3 {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .nota-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Lista de entregas */
+  .entregas-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .entrega-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .entrega-item strong {
+    color: #007bff;
+  }
+  
+  /* Mensaje de "no notas" */
+  .no-notas {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
+  /* Botón "Atrás" */
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .no-calificado {
+    color: red;
+    font-weight: bold;
+  }
+  

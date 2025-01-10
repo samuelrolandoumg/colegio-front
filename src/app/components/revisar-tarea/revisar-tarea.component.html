@@ -1,0 +1,32 @@
+<div class="revisar-tarea-container">
+  <button class="btn-atras" (click)="volver()">Atrás</button>
+  <div class="titulo-container">
+    <h2>Revisar Tarea</h2>
+    <h3>{{ archivoNombre }}</h3>
+  </div>
+
+  <div *ngIf="archivoUrl" class="archivo-container">
+    <iframe
+      [src]="archivoUrl | safeUrl"
+      width="100%"
+      frameborder="0"
+    ></iframe>
+  </div>
+
+  <div *ngIf="mensaje" class="error-message">
+    {{ mensaje }}
+  </div>
+
+  <div class="calificacion-container">
+    <label for="punteo" class="punteo-label">Punteo actual: {{ punteoActual }}</label>
+    <div class="calificar-input">
+      <input
+        type="number"
+        id="punteo"
+        [(ngModel)]="punteo"
+        placeholder="Ingrese el punteo"
+      />
+      <button class="btn-calificar" (click)="calificarEntrega()">Calificar</button>
+    </div>
+  </div>
+</div>

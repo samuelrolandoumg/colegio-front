@@ -1,0 +1,40 @@
+<!-- <div *ngFor="let clase of clases; let i = index" class="clase-container">
+  <button
+    *ngIf="i === 0"
+    class="btn btn-secondary"
+    (click)="goBack()"
+  >
+    Atrás
+  </button>
+
+  <h2>Clase: {{ clase.nombre_clase }}</h2>
+  <div *ngFor="let grupo of clase.grupos" class="grupo-container">
+    <h3><strong>Grupo:</strong> {{ grupo.nombre_grupo }}</h3>
+    <ul>
+      <li *ngFor="let alumno of grupo.alumnos">
+        {{ alumno.nombre_alumno }} (ID: {{ alumno.id_alumno }})
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+
+<div class="no-print">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+</div>
+
+<div *ngFor="let clase of clases; let i = index" class="clase-container">
+  <h2 class="clase-title">Clase: {{ clase.nombre_clase }}</h2>
+  <div *ngFor="let grupo of clase.grupos" class="grupo-container">
+    <h3 class="grupo-title"><strong>Grupo:</strong> {{ grupo.nombre_grupo }}</h3>
+    <ul class="alumno-list">
+      <li *ngFor="let alumno of grupo.alumnos" class="alumno-item">
+        {{ alumno.nombre_alumno }} (ID: {{ alumno.id_alumno }})
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="no-print download-container">
+  <button class="btn btn-primary" (click)="descargarPDF()">Descargar en PDF</button>
+</div>

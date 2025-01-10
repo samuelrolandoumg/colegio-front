@@ -1,0 +1,46 @@
+<div class="container">
+
+  <button class="btn back-button" (click)="goBack()">Atrás</button>
+  <h2 class="title">Grados y Clases</h2>
+  <div class="grupos-container">
+    <div *ngFor="let grupo of gruposClases" class="grupo-card">
+      <h3 class="grupo-title">{{ grupo.nombre_grupo }}</h3>
+      <p class="grupo-detail">
+        <strong>Clase:</strong> {{ grupo.Clase?.nombre_clase }}
+        <strong>Clase:</strong> {{ grupo.Clase?.id_clase }}
+
+      </p>
+
+      <button class="btn btn-primary" (click)="verTareas(grupo.id_grupo, grupo.Clase?.id_clase)">
+        Ver Tareas
+      </button>
+      
+    </div>
+  </div>
+
+  <div *ngIf="tareas && tareas.length > 0" class="tareas-container">
+    <h2 class="subtitle">Tareas de la Clase</h2>
+    <div *ngFor="let tarea of tareas" class="tarea-card">
+      <h3 class="tarea-title">{{ tarea.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+      <p><strong>Puntuación:</strong> {{ tarea.puntuacion }}</p>
+      <p><strong>Fecha de Entrega:</strong> {{ tarea.fecha_entrega }}</p>
+      <div class="entregas-container">
+        <h4>Entregas:</h4>
+        <div *ngFor="let entrega of tarea.Entregas" class="entrega-card">
+          <p><strong>Alumno:</strong> {{ entrega.Usuario.nombre }}</p>
+          <p>
+            <strong>Archivo:</strong>
+            <a [href]="entrega.archivo_url" target="_blank">
+              {{ entrega.archivo_nombre }}
+            </a>
+          </p>
+          <p><strong>Fecha Subida:</strong> {{ entrega.fecha_subida }}</p>
+          <p [ngClass]="{ entregado: entrega.calificado, 'no-entregado': !entrega.calificado }">
+            <strong>Calificado:</strong> {{ entrega.calificado ? 'Sí' : 'No' }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

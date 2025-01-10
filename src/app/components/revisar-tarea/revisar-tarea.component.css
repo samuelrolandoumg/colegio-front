@@ -1,0 +1,87 @@
+.revisar-tarea-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* Reduce el espacio */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-atras {
+  position: absolute; /* Fija el botón en la esquina superior izquierda */
+  top: 20px;
+  left: 20px;
+  background: #8f94fb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-atras:hover {
+  background: #4e54c8;
+}
+
+.titulo-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h2 {
+  color: #4e54c8;
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.archivo-container iframe {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 80vh; /* Ajusta el visor del PDF para ocupar más espacio */
+}
+
+.calificacion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.calificar-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calificar-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100px;
+  text-align: center;
+}
+
+.btn-calificar {
+  background: #4e54c8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-calificar:hover {
+  background: #2d347d;
+}

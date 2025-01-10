@@ -1,0 +1,58 @@
+<!-- <div class="header">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+</div>
+
+<h2>Notas</h2>
+
+<div class="content">
+  <ul *ngIf="notas && notas.length > 0; else noNotas" class="notas-list">
+    <li *ngFor="let nota of notas" class="nota-item">
+      <h3>Tarea: {{ nota.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ nota.descripcion }}</p>
+      <p><strong>Entregas:</strong></p>
+
+      <ul class="entregas-list">
+        <li *ngFor="let entrega of nota.entregas" class="entrega-item">
+          <strong>Punteo:</strong> {{ entrega.punteo }} <br />
+          <strong>ID del Alumno:</strong> {{ entrega.id_alumno }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ng-template #noNotas>
+    <p class="no-notas">No hay notas disponibles para esta clase y grupo.</p>
+  </ng-template>
+</div> -->
+
+<div class="header">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+</div>
+
+<h2>Notas</h2>
+
+<div class="content">
+  <ul *ngIf="notas && notas.length > 0; else noNotas" class="notas-list">
+    <li *ngFor="let nota of notas" class="nota-item">
+      <h3>Tarea: {{ nota.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ nota.descripcion }}</p>
+      <p><strong>Entregas:</strong></p>
+
+      <ul class="entregas-list">
+        <li *ngFor="let entrega of nota.entregas" class="entrega-item">
+          <strong>Punteo:</strong>
+          <span *ngIf="entrega.punteo !== null; else noCalificado">
+            {{ entrega.punteo }}
+          </span>
+          <ng-template #noCalificado>
+            <span style="color: red;">No calificado</span>
+          </ng-template>
+          <br />
+          <strong>ID del Alumno:</strong> {{ entrega.id_alumno }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ng-template #noNotas>
+    <p class="no-notas">No hay notas disponibles para esta clase y grupo.</p>
+  </ng-template>
+</div>

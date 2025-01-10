@@ -1,0 +1,31 @@
+<div class="header-container">
+  <button class="btn btn-secondary" (click)="goBack()">Regresar</button>
+</div>
+<h2 class="header-title">Calificaciones</h2>
+
+<div *ngIf="calificacionesData.length > 0; else noData">
+  <div *ngFor="let clase of calificacionesData" class="clase-container">
+    <h3 class="clase-title">Clase: {{ clase.nombre_clase }}</h3>
+    <div *ngFor="let grupo of clase.grupos" class="grupo-container">
+      <h4 class="grupo-title">Grupo: {{ grupo.nombre_grupo }}</h4>
+      <table class="calificaciones-table">
+        <thead>
+          <tr>
+            <th>Alumno</th>
+            <th>Total Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of grupo.alumnos">
+            <td>{{ alumno.nombre_alumno }}</td>
+            <td>{{ alumno.total_puntos }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p class="no-data-message">No hay calificaciones disponibles.</p>
+</ng-template>

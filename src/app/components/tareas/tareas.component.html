@@ -1,0 +1,80 @@
+<!-- <div class="container">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+
+  <h2>Tareas de la Clase</h2>
+  
+  <div *ngFor="let tarea of tareas" class="tarea-card">
+    <div class="tarea-header">Tarea: {{ tarea.titulo }}</div>
+    <div class="tarea-content">
+      <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+      <p><strong>Puntuación:</strong> {{ tarea.puntuacion }}</p>
+      <p><strong>Fecha de Entrega:</strong> {{ tarea.fecha_entrega }}</p>
+      <p><strong>Alumnos:</strong></p>
+      
+      <ul>
+        <li *ngFor="let alumno of tarea.alumnos">
+          <p><strong>Alumno:</strong> {{ alumno.nombre }}</p>
+          <p>
+            <span *ngIf="alumno.entregado" class="entregado">Entregado</span>
+            <span *ngIf="!alumno.entregado" class="no-entregado">No entregado</span>
+          </p>
+
+          <div *ngIf="alumno.entregado">
+            <p>
+              <strong>Archivo:</strong>
+              <a [href]="alumno.archivo_url" target="_blank">{{ alumno.archivo_nombre }}</a>
+            </p>
+            <p><strong>Fecha Subida:</strong> {{ alumno.fecha_subida }}</p>
+            <p><strong>Calificado:</strong> {{ alumno.calificado ? 'Sí' : 'No' }}</p>
+          </div>
+          
+          <button class="btn" (click)="redirigirRevisarTarea(tarea.id_tarea, alumno.id_entrega)">
+            Revisar Tarea
+          </button>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+
+  <h2>Tareas de la Clase</h2>
+  
+  <div *ngFor="let tarea of tareas" class="tarea-card">
+    <div class="tarea-header">Tarea: {{ tarea.titulo }}</div>
+    <div class="tarea-content">
+      <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+      <p><strong>Puntuación:</strong> {{ tarea.puntuacion }}</p>
+      <p><strong>Fecha de Entrega:</strong> {{ tarea.fecha_entrega }}</p>
+      <p><strong>Alumnos:</strong></p>
+      
+      <ul>
+        <li *ngFor="let alumno of tarea.alumnos">
+          <p><strong>Alumno:</strong> {{ alumno.nombre }}</p>
+          <p>
+            <span *ngIf="alumno.entregado" class="entregado">Entregado</span>
+            <span *ngIf="!alumno.entregado" class="no-entregado">No entregado</span>
+          </p>
+
+          <div *ngIf="alumno.entregado">
+            <p>
+              <strong>Archivo:</strong>
+              <a [href]="alumno.archivo_url" target="_blank">{{ alumno.archivo_nombre }}</a>
+            </p>
+            <p><strong>Fecha Subida:</strong> {{ alumno.fecha_subida }}</p>
+            <p><strong>Calificado:</strong> {{ alumno.calificado ? 'Sí' : 'No' }}</p>
+          </div>
+          
+          <!-- Botón "Revisar Tarea" solo aparece si entregado es true -->
+          <button *ngIf="alumno.entregado" class="btn" (click)="redirigirRevisarTarea(tarea.id_tarea, alumno.id_entrega)">
+            Revisar Tarea
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

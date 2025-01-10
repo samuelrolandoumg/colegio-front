@@ -1,0 +1,43 @@
+<div class="container">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+
+  <h2>Crear Tarea</h2>
+  <form [formGroup]="tareaForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="titulo" type="text" />
+    </div>
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" rows="4"></textarea>
+    </div>
+    <div>
+      <label for="puntuacion">Puntuación:</label>
+      <input id="puntuacion" formControlName="puntuacion" type="number" />
+    </div>
+    <div>
+      <label for="fecha_entrega">Fecha de Entrega:</label>
+      <input id="fecha_entrega" formControlName="fecha_entrega" type="date" />
+    </div>
+    <div>
+      <label for="tipo_documento">Tipo de Documento:</label>
+      <select id="tipo_documento" formControlName="tipo_documento">
+        <option value="pdf">PDF</option>
+        <option value="doc">DOC</option>
+      </select>
+    </div>
+    <div>
+      <label for="id_grupo">Grupo y Clase:</label>
+      <select id="id_grupo" formControlName="id_grupo">
+        <option *ngFor="let grupo of gruposClases" [value]="grupo.id_grupo">
+          {{ grupo.nombre_grupo }} - {{ grupo.Clase?.nombre_clase }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label for="archivo">Adjuntar Archivo:</label>
+      <input id="archivo" type="file" accept=".pdf,.doc,.docx" />
+    </div>
+    <button type="submit">Crear Tarea</button>
+  </form>
+</div>

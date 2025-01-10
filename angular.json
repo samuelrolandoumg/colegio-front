@@ -23,7 +23,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "node_modules/pdfjs-dist/build/",
+                "output": "/assets/pdfjs/"
               }
             ],
             "styles": [
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b22a19d6-63f4-424f-acd0-7ce42cd1038d"
   }
 }

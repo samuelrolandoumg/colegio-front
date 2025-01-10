@@ -1,0 +1,36 @@
+<div class="container">
+  <button class="btn btn-secondary back-button" (click)="goBack()">Atrás</button>
+  <div class="form-container">
+    <h2>Crear Materia</h2>
+    <form [formGroup]="grupoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre_grupo">Nombre de Materia:</label>
+        <input id="nombre_grupo" formControlName="nombre_grupo" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="id_clase">Grado:</label>
+        <select id="id_clase" formControlName="id_clase" class="form-control">
+          <option *ngFor="let clase of clases" [value]="clase.id_clase">
+            {{ clase.nombre_clase }} - {{ clase.descripcion }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Alumnos:</label>
+        <div class="checkbox-group">
+          <div *ngFor="let alumno of alumnos" class="checkbox-item">
+            <label>
+              <input
+                type="checkbox"
+                [value]="alumno.id_usuario"
+                (change)="onAlumnoSelect($event)"
+              />
+              {{ alumno.nombre }} ({{ alumno.correo }})
+            </label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear Grupo</button>
+    </form>
+  </div>
+</div>

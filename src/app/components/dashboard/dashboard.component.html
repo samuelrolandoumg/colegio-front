@@ -1,0 +1,16 @@
+<div class="menu-lateral">
+  <ul>
+    <li *ngFor="let option of menuOptions">
+      <button class="menu-button" (click)="option.action()">{{ option.label }}</button>
+    </li>
+  </ul>
+</div>
+
+<div class="dashboard-container">
+  <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+  <div class="content">
+    <h1>Bienvenido al Portal del Colegio</h1>
+    <h2>Hola, {{ usuario?.nombre }}</h2>
+    <p>Rol: {{ usuario?.rol }}</p>
+  </div>
+</div>

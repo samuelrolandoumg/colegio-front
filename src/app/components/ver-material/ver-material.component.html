@@ -1,0 +1,29 @@
+<!-- 
+<div class="ver-material-container">
+    <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+    <h2>Material de la Tarea</h2>
+    <h3>{{ archivoNombre }}</h3>
+    <div *ngIf="archivoUrl">
+      <iframe [src]="archivoUrl" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+    <div *ngIf="!archivoUrl" class="error-message">
+      No se adjuntó ningún material a esta tarea.
+    </div>
+  </div>
+   -->
+  <div class="container">
+    <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+    <h2>Material de la Tarea</h2>
+    <h3>{{ archivoNombre }}</h3>
+    <iframe
+      *ngIf="archivoUrl"
+      [src]="archivoUrl | safeUrl"
+      width="100%"
+      height="800px"
+      frameborder="0"
+    ></iframe>
+    <div *ngIf="!archivoUrl" class="error-message">
+      No se pudo cargar el archivo adjunto.
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="container">
+  <button class="btn btn-secondary back-button" (click)="goBack()">Atrás</button>
+  <div class="form-container">
+    <h2>Crear Grado</h2>
+    <form [formGroup]="claseForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre_clase">Nombre del grado:</label>
+        <input id="nombre_clase" formControlName="nombre_clase" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="id_profesor">Profesor:</label>
+        <select id="id_profesor" formControlName="id_profesor" class="form-control">
+          <option *ngFor="let profesor of profesores" [value]="profesor.id_usuario">
+            {{ profesor.nombre }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear Clase</button>
+    </form>
+  </div>
+</div>

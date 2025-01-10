@@ -1,0 +1,100 @@
+/* Botón "Regresar" */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    float: left; /* Mueve el botón a la izquierda */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+/* Contenedor del encabezado */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Ajusta la posición del botón y título */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de las clases */
+  .clase-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Título de las clases */
+  .clase-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Contenedor de los grupos */
+  .grupo-container {
+    margin-bottom: 15px;
+  }
+  
+  /* Título de los grupos */
+  .grupo-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  /* Tabla de calificaciones */
+  .calificaciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .calificaciones-table th {
+    background-color: #5564eb; /* Azul más suave */
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #ddd;
+  }
+  
+  .calificaciones-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .calificaciones-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Mensaje cuando no hay datos */
+  .no-data-message {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-top: 50px;
+  }
+  

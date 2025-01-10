@@ -1,0 +1,30 @@
+<div class="container-button">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+</div>
+<div class="container">
+
+  <h2>Agregar Alumnos a un Grupo</h2>
+
+  <div>
+    <label for="grupo">Selecciona un Grupo:</label>
+    <select id="grupo" [(ngModel)]="idGrupoSeleccionado" class="form-select">
+      <option *ngFor="let grupo of grupos" [value]="grupo.id_grupo">
+        {{ grupo.nombre_grupo }} - {{ grupo.Clase?.nombre_clase }}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="alumnos">Selecciona Alumnos:</label>
+    <div *ngFor="let alumno of alumnos" class="checkbox-label">
+      <input
+        type="checkbox"
+        [value]="alumno.id_usuario"
+        (change)="toggleAlumnoSeleccionado(alumno.id_usuario)"
+      />
+      {{ alumno.nombre }} ({{ alumno.correo }})
+    </div>
+  </div>
+
+  <button (click)="agregarAlumnosAGrupo()">Agregar Alumnos</button>
+</div>

@@ -1,0 +1,121 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.grupos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.grupo-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-title {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.grupo-detail {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+}
+
+.tareas-container {
+  margin-top: 40px;
+}
+
+.tarea-card {
+  background-color: #eef;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarea-title {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.entregas-container {
+  margin-top: 15px;
+}
+
+.entrega-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.entregado {
+  color: green;
+  font-weight: bold;
+}
+
+.no-entregado {
+  color: red;
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #004494;
+}

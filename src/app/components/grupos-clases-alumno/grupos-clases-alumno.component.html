@@ -1,0 +1,22 @@
+<div class="header">
+  <button class="btn btn-secondary" (click)="goBack()">Atrás</button>
+</div>
+
+<h2 class="center-title">Grado y Clases</h2>
+<div class="content">
+  <ul class="class-list">
+    <li *ngFor="let grupo of gruposClases" class="class-item">
+      <strong>Grado:</strong> {{ grupo.clase?.nombre_clase }}
+      <ul class="group-list">
+        <li>
+          <strong>Grupo:</strong> {{ grupo.nombre_grupo }}
+
+          <button class="btn btn-primary" (click)="verNotas(grupo.id_grupo, grupo.clase?.id_clase)">
+            Ver Notas
+          </button>
+          
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

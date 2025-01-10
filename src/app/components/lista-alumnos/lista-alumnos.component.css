@@ -1,0 +1,150 @@
+/* .clase-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #343a40;
+  }
+  
+  h3 {
+    margin-top: 15px;
+    color: #495057;
+  }
+  
+  h3 strong {
+    color: #007bff;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    padding: 5px 0;
+    color: #212529;
+  }
+  
+  ul li::before {
+    content: "• ";
+    color: #007bff;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  */
+
+
+/* Botón "Atrás" */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Botón "Descargar en PDF" */
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contenedor de las clases */
+  .clase-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Títulos de las clases */
+  .clase-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Títulos de los grupos */
+  .grupo-title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #007bff;
+  }
+  
+  /* Lista de alumnos */
+  .alumno-list {
+    padding-left: 20px;
+  }
+  
+  .alumno-item {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Contenedor de descarga */
+  .download-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Ocultar elementos no deseados al imprimir */
+  @media print {
+    .btn, .no-print {
+      display: none;
+    }
+  
+    .clase-container {
+      page-break-after: always; /* Salto de página entre clases */
+    }
+  
+    .clase-container:last-child {
+      page-break-after: auto; /* Evitar salto en la última clase */
+    }
+  }
+  

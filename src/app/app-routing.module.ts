@@ -1,8 +1,5 @@
-import { importProvidersFrom } from '@angular/core';
-import { provideRouter, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { provideHttpClient,withFetch } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EntregarTareaComponent } from './components/entregar-tarea/entregar-tarea.component';
@@ -16,7 +13,6 @@ import { CrearTareaComponent } from './components/crear-tarea/crear-tarea.compon
 import { CrearUsuarioComponent } from './components/crear-usuario/crear-usuario.component';
 import { CrearGrupoComponent } from './components/crear-grupo/crear-grupo.component';
 import { AgregarAlumnoGrupoComponent } from './components/agregar-alumno-grupo/agregar-alumno-grupo.component';
-import { ReactiveFormsModule } from '@angular/forms'; // IMPORTA FormsModule y ReactiveFormsModule
 import { ListarProfesoresComponent } from './components/listar-profesores/listar-profesores.component';
 import { CrearClaseComponent } from './components/crear-clase/crear-clase.component';
 import { ListaAlumnosComponent } from './components/lista-alumnos/lista-alumnos.component';
@@ -27,13 +23,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'entregar-tarea', component: EntregarTareaComponent },
+  { path: 'entregar-tarea', component: EntregarTareaComponent},
   { path: 'tareas-asignadas', component: TareasAsignadasComponent },
   { path: 'grupos-clases', component: GruposClasesComponent },
-  { path: 'tareas', component: TareasComponent },
-  { path: 'revisar-tarea', component: RevisarTareaComponent },
-  { path: 'grupos-clases-alumno', component: GruposClasesAlumnoComponent }, 
-  { path: 'ver-notas', component: VerNotasComponent }, 
+  { path: 'tareas', component: TareasComponent},
+  { path: 'revisar-tarea', component: RevisarTareaComponent},
+  { path: 'grupos-clases-alumno', component: GruposClasesAlumnoComponent }, // Nueva ruta añadida
+  { path: 'ver-notas', component: VerNotasComponent}, // Nueva ruta
   { path: 'crear-tarea', component: CrearTareaComponent },
   { path: 'crear-usuario', component: CrearUsuarioComponent },
   { path: 'crear-grupo', component: CrearGrupoComponent },
@@ -43,12 +39,11 @@ const routes: Routes = [
   { path: 'lista-alumnos', component: ListaAlumnosComponent },
   { path: 'ver-calificaciones-alumnos', component: VerCalificacionesComponent },
   { path: 'ver-material', component: VerMaterialComponent },
+
 ];
 
-export const appConfig = {
-  providers: [
-    provideRouter(routes),               // Proveedor para las rutas
-    provideHttpClient(withFetch()),                 // Proveedor para HttpClient
-    importProvidersFrom(FormsModule,ReactiveFormsModule),    // Importar FormsModule globalmente
-  ],
-};
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}

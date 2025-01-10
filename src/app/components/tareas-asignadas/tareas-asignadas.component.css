@@ -1,0 +1,106 @@
+.tareas-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tareas-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tareas-container h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.tareas-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tareas-container li {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s;
+}
+
+.tareas-container li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tareas-container li h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.tareas-container p {
+  margin: 5px 0;
+  color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.btn-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.btn-success:hover {
+  background-color: #45a049;
+}
+
+button.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+button.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+button.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+button.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+button.btn-entregar {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+}
+
+button.btn-entregar:hover {
+  background-color: #218838;
+}
+
+/* Ajustar botones de navegación */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

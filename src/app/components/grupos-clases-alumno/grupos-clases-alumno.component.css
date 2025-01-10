@@ -1,0 +1,94 @@
+/* Encabezado con botón "Atrás" */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  
+  .header button {
+    margin-left: 10px;
+  }
+  
+  /* Contenedor principal */
+  .content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Lista de clases */
+  .class-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .class-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .class-item strong {
+    color: #007bff;
+  }
+  
+  /* Lista de grupos */
+  .group-list {
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .group-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .group-list button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .group-list button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón "Atrás" */
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
