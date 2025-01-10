@@ -2,7 +2,6 @@ import { importProvidersFrom } from '@angular/core';
 import { provideRouter, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { provideHttpClient,withFetch } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -51,6 +50,5 @@ export const appConfig = {
     provideRouter(routes),               // Proveedor para las rutas
     provideHttpClient(withFetch()),                 // Proveedor para HttpClient
     importProvidersFrom(FormsModule,ReactiveFormsModule),    // Importar FormsModule globalmente
-    { provide: LocationStrategy, useClass: HashLocationStrategy }, // Configuración de hash
   ],
 };
