@@ -1,12 +1,13 @@
 {
   "name": "colegio-front",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "build": "ng build --configuration production",
-    "postinstall": "ng build --configuration production",
-    "start": "npx http-server dist/colegio-front -p $PORT"
-  },
+"scripts": {
+  "ng": "ng",
+  "start": "npx http-server dist/colegio-front -p $PORT",
+  "build": "ng build --configuration production",
+  "postinstall": "ng build --configuration production"
+},
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.0.5",
