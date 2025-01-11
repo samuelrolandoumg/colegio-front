@@ -1,4 +1,4 @@
-<div class="menu-lateral">
+<!-- <div class="menu-lateral">
   <ul>
     <li *ngFor="let option of menuOptions">
       <button class="menu-button" (click)="option.action()">{{ option.label }}</button>
@@ -12,5 +12,40 @@
     <h1>Bienvenido al Portal del Colegio</h1>
     <h2>Hola, {{ usuario?.nombre }}</h2>
     <p>Rol: {{ usuario?.rol }}</p>
+  </div>
+</div> -->
+
+<div class="menu-lateral" [class.hidden]="!menuAbierto">
+  <ul>
+    <li *ngFor="let option of menuOptions">
+      <button class="menu-button" (click)="option.action()">{{ option.label }}</button>
+    </li>
+  </ul>
+</div>
+
+<div class="dashboard-container">
+  <div class="top-bar">
+    <button class="btn-toggle-menu" (click)="toggleMenu()">☰</button>
+    <h1 class="app-title">Portal del Colegio</h1>
+    <button class="btn-logout" (click)="logout()">
+      <img
+      src="https://cdn-icons-png.flaticon.com/128/4034/4034229.png"
+      alt="Cerrar Sesión"
+      class="logout-icon"
+    />    </button>
+  </div>
+  <div class="content">
+    <h2>Hola, {{ usuario?.nombre }}</h2>
+    <p>Rol: {{ usuario?.rol }}</p>
+  </div>
+</div>
+
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <p>¿Está seguro que desea salir?</p>
+    <div class="modal-actions">
+      <button class="btn-confirm" (click)="confirmLogout()">Sí</button>
+      <button class="btn-cancel" (click)="cancelLogout()">No</button>
+    </div>
   </div>
 </div>
